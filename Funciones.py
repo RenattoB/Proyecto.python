@@ -63,7 +63,6 @@ def contadores():
     print ("El participante ",nombreA," tiene ",ContadorA," puntos")
     print (ContadorB)
     
-
 def preguntasCulturaGeneral():
     global ContadorA
     global Respuesta
@@ -71,61 +70,66 @@ def preguntasCulturaGeneral():
     for i in opcionesCultura[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="B" or "b":
+    if Respuesta=="B" or Respuesta=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else: 
         print("Respuesta incorrecta")
+    print("\n")
         
     print("¿Con que instrumento se mide la temperatura")
     for i in opcionesCultura[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="C" or "c":
+    if Respuesta=="C" or Respuesta=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
+    print("\n")
 
     print("¿Cuando empezo la segunda guerra mundial?")
     for i in opcionesCultura[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="A" or "a":
+    if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
         print("Respuesta incorrecta")
+    print("\n")
 
     print("¿Cual es el metal mas caro del mundo?")
     for i in opcionesCultura[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="C" or "c":
+    if Respuesta=="C" or Respuesta=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
         print("Respuesta incorrecta")
+    print("\n")
 
     print("¿En que pais se encuentra la universidad de Cambridge?")
     for i in opcionesCultura[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="B" or "b":
+    if Respuesta=="B" or Respuesta=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
         print("Respuesta incorrecta")
-
+    print("\n")
 
     print("¿Cual es el libro sagrado del Islam?")
     for i in opcionesCultura[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="A" or "a":
+    if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
         print("Repuesta incorrecta")
+    print("\n")
     
         
 
