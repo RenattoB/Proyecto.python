@@ -5,6 +5,7 @@ cantidad="default"
 categoria_elegida="Default"
 eleccion="D"
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
+opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
 #Funciones
 def inicio():
     global nombreA
@@ -13,11 +14,13 @@ def inicio():
     cantidad=int(input("¿Cuantos jugadores jugaran? 1 o 2: "))
     if cantidad==1:
         nombreA=input("Ingrese su nombre: ")
-        nombreB=input("Ingrese el nombre del villano que quiere enfrentar: ")
+        nombreB=input("Ingrese el nombre del villano que quiere enfrentar: " )
+        print("********************************************************************")
         print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",nombreB, " por la gloria.¿Estas listo para jugar?")
     else:
         nombreA=input("Ingrese el nombre del primer jugador: ")
         nombreB=input("Ingrese el nombre del segundo jugador: ")
+        print("********************************************************************")
         print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria.¿Estais listo para jugar?")
     
 def categorias():
@@ -43,15 +46,23 @@ def categorias():
     return categoria_elegida
 
 def preguntasHistoria():
-    print("Hola historia")
+    print("¿Cuando nacio napoleon?")
+    for i in opcionesHistoria[0]:
+        print (i)
+
+
 def preguntasCulturaGeneral():
     print("Hola Cultura general")
+
 def preguntasMarvel():
     print ("Hola Marvel")
+
 def preguntasMusica():
     print("Hola Musica")
+
 def preguntasCiencia():
     print("Hola Ciencia")
+
 def preguntasTecnologia():
     print("Hola Tecnologia")
 
