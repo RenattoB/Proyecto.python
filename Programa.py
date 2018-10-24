@@ -1,4 +1,5 @@
 #Entrada
-from Funciones import inicio
+from Funciones import *
 
 inicio()
+categorias()
