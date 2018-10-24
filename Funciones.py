@@ -1,10 +1,11 @@
+#Varibles
 nombreA="default"
 nombreB="default"
 cantidad="default"
 categoria_elegida="Default"
 eleccion="D"
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
-
+#Funciones
 def inicio():
     global nombreA
     global nombreB
@@ -38,11 +39,21 @@ def categorias():
         categoria_elegida= "Ciencia"
     else:
         categoria_elegida= "Tecnologia"
-    print (categoria_elegida)
+    
     return categoria_elegida
 
 def preguntasHistoria():
     print("Hola historia")
+def preguntasCulturaGeneral():
+    print("Hola Cultura general")
+def preguntasMarvel():
+    print ("Hola Marvel")
+def preguntasMusica():
+    print("Hola Musica")
+def preguntasCiencia():
+    print("Hola Ciencia")
+def preguntasTecnologia():
+    print("Hola Tecnologia")
 
 
 
