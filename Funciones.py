@@ -113,7 +113,7 @@ def preguntasCulturaGeneral():
     for i in opcionesCultura[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -124,7 +124,7 @@ def preguntasCulturaGeneral():
     for i in opcionesCultura[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta=="B" or Respuesta=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
