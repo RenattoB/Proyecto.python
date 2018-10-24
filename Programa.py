@@ -24,6 +24,4 @@ elif a=="Ciencia":
 else:
     print("Usted selecciono la categoria de Tecnologia")
     preguntasTecnologia()
-
-ContadorAM=preguntasHistoria()
-print (ContadorAM)
+contadores()

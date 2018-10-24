@@ -6,6 +6,8 @@ categoria_elegida="Default"
 eleccion="D"
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
 opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
+opcionesCultura=[["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"],["a. Odometro","b. Interferometro","c. Termometro"]
+,["a. 1914","b. 1915","c. 1913"],["a. Oro","b. Diamante","c. Rodio"],["a. ReinoUnido","b. España","c. Francia"],["a. Biblia","b. Coran","c. Dhammapada"]]
 Respuesta="Default"
 ContadorA=0
 ContadorB=0
@@ -55,13 +57,77 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     if Respuesta=="B" or "b":
-        print("Respuesta correcta tienes un punto mas")
         ContadorA=ContadorA+1
-        return ContadorA
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+def contadores():
+    print ("El participante ",nombreA," tiene ",ContadorA," puntos")
+    print (ContadorB)
     
 
 def preguntasCulturaGeneral():
-    print("Hola Cultura general")
+    global ContadorA
+    global Respuesta
+    print("¿Quien escribio la Odisea?")
+    for i in opcionesCultura[0]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="B" or "b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos") 
+    else: 
+        print("Respuesta incorrecta")
+        
+    print("¿Con que instrumento se mide la temperatura")
+    for i in opcionesCultura[1]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="C" or "c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: print("Respuesta incorrecta")
+
+    print("¿Cuando empezo la segunda guerra mundial?")
+    for i in opcionesCultura[2]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="A" or "a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+
+    print("¿Cual es el metal mas caro del mundo?")
+    for i in opcionesCultura[3]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="C" or "c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+
+    print("¿En que pais se encuentra la universidad de Cambridge?")
+    for i in opcionesCultura[4]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="B" or "b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+
+
+    print("¿Cual es el libro sagrado del Islam?")
+    for i in opcionesCultura[5]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="A" or "a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else:
+        print("Repuesta incorrecta")
+    
+        
 
 def preguntasMarvel():
     print ("Hola Marvel")
