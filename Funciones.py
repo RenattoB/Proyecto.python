@@ -6,6 +6,9 @@ categoria_elegida="Default"
 eleccion="D"
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
 opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
+Respuesta="Default"
+ContadorA=0
+ContadorB=0
 #Funciones
 def inicio():
     global nombreA
@@ -46,10 +49,16 @@ def categorias():
     return categoria_elegida
 
 def preguntasHistoria():
+    global ContadorA
     print("¿Cuando nacio napoleon?")
     for i in opcionesHistoria[0]:
         print (i)
-
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    if Respuesta=="B" or "b":
+        print("Respuesta correcta tienes un punto mas")
+        ContadorA=ContadorA+1
+        return ContadorA
+    
 
 def preguntasCulturaGeneral():
     print("Hola Cultura general")

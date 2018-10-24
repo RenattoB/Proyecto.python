@@ -4,7 +4,7 @@ from Funciones import *
 #codigo
 inicio()
 a =categorias()
-print(a)
+
 
 if a== "Historia" :
     print("Usted selecciono la categoria de Historia")
@@ -25,3 +25,5 @@ else:
     print("Usted selecciono la categoria de Tecnologia")
     preguntasTecnologia()
 
+ContadorAM=preguntasHistoria()
+print (ContadorAM)
