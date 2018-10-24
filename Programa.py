@@ -1,4 +1,5 @@
-#Entrada
+
+#Importamos nuestra clase Funciones:
 from Funciones import *
 
 #codigo
@@ -24,4 +25,5 @@ elif a=="Ciencia":
 else:
     print("Usted selecciono la categoria de Tecnologia")
     preguntasTecnologia()
+    
 contadores()
