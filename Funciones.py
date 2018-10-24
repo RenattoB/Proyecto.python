@@ -21,6 +21,7 @@ def inicio():
     
 def categorias():
     global categoria_elegida
+        
     print("Las categorias disponibles son: ")
     for i in categorias_array:
         print (" ",i," ")
@@ -38,6 +39,11 @@ def categorias():
     else:
         categoria_elegida= "Tecnologia"
     print (categoria_elegida)
+    return categoria_elegida
+
+def preguntasHistoria():
+    print("Hola historia")
+
 
 
     

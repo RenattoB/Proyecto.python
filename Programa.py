@@ -1,5 +1,11 @@
 #Entrada
 from Funciones import *
 
+#codigo
 inicio()
-categorias()
+a =categorias()
+print(a)
+
+if a== "Historia" :
+    preguntasHistoria()
+
