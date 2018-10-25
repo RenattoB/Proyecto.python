@@ -65,8 +65,7 @@ def categorias():
         categoria_elegida= "Ciencia"
     else:
         categoria_elegida= "Tecnologia"
-
-return categoria_elegida
+    return categoria_elegida
  
 def preguntasHistoria():
 
@@ -89,7 +88,7 @@ def contadores():
 
         if ContadorA > ContadorB:
             print("El ganador es ",nombreA)
-        elif Contador A < Contador B:
+        elif ContadorA < ContadorB:
             print("EL ganador es ",nombreB)
         else:
             print("La victoria se decidira con una pregunta extra!!")
