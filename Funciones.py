@@ -1,10 +1,15 @@
+import sys
 #Varibles
+
 nombreA="default"
 nombreB="default"
 cantidad="default"
-
 categoria_elegida="Default"
 eleccion="Default"
+Respuesta="Default"
+ContadorErrores=0
+ContadorA=0
+ContadorB=0
 
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
 
@@ -13,30 +18,43 @@ opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
 opcionesCultura=[["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"],["a. Odometro","b. Interferometro","c. Termometro"]
 ,["a. 1914","b. 1915","c. 1913"],["a. Oro","b. Diamante","c. Rodio"],["a. ReinoUnido","b. España","c. Francia"],["a. Biblia","b. Coran","c. Dhammapada"]]
 
-Respuesta="Default"
 
-ContadorA=0
-ContadorB=0
 
 #Funciones
 def inicio():
-    
+    global ContadorErrores
     global nombreA
     global nombreB
     global villano
     global cantidad
     
 # Usuario selecciona el modo de juego que desea:
+    while True:
+        ContadorErrores+=1
+        if ContadorErrores==5:
+            print("Numero de veces equivocado excedido""\n""Programa finalizado")
+            sys.exit()
+        try:
+            cantidad=int(input("¿Cuantos jugadores jugaran? 1 o 2: "))
+            if cantidad==1 or cantidad==2:
+                break
+            print("Cantidad invalida""\n""Por favor introduzca una cantidad valida")
+        except:
+            print("Entrada incorrecta, por favor ingrese un numero entero")
+        
 
-    cantidad=int(input("¿Cuantos jugadores jugaran? 1 o 2: "))
+        
 
 # Digitacion de nombre para el Player1 y Player2 (o enemigo):   
+    
     if cantidad==1:
         nombreA=input("Nombre del Jugador1: ")
         nombreB=input("Nombre del enemigo: " )
+            
         print("******************************************************************************************")
         print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",nombreB, " por la gloria.¿Estas listo para jugar?")
-    else:
+    
+    elif cantidad==2:
         nombreA=input("Nombre del Jugador1: ")
         nombreB=input("Nombre del Jugador2: ")
         print("*******************************************************************************************")
