@@ -8,12 +8,16 @@ eleccion="Default"
 
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
 
+# ARREGLO DE CLAVES HISTORIA:
+
 opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
+
+# ARREGLO DE CLAVES CULTURA GENERAL:
 
 opcionesCultura=[["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"],["a. Odometro","b. Interferometro","c. Termometro"]
 ,["a. 1914","b. 1915","c. 1913"],["a. Oro","b. Diamante","c. Rodio"],["a. ReinoUnido","b. España","c. Francia"],["a. Biblia","b. Coran","c. Dhammapada"]]
 
-# ARREGLOS DE MARVEL
+# ARREGLOS DE CLAVES MARVEL:
 
 opcionesMarvel=[["a. Normamu ","b. Voldemort" , "c. The Ancient"],["a. Red Skull and Gamora","b. Red Skull and minerva" , "c. Gamora and Red Skull"],["a. New York","b. El Pentagono (Nave SHIELD)" , "c. Asgard"]
 ,["a. Aether","b. Chitauri Scepter" , "c. Orb"]
@@ -26,7 +30,7 @@ Respuesta="Default"
 ContadorA=0
 ContadorB=0
 
-#Funciones
+# FUNCIONES
 def inicio():
     
     global nombreA
@@ -34,7 +38,7 @@ def inicio():
     global villano
     global cantidad
     
-# Usuario selecciona el modo de juego que desea:
+# USUARIO SELECCIONA EL MODO DE JUEGO QUE DESEA: :
 
     cantidad=int(input("¿Cuantos jugadores jugaran? 1 o 2: "))
 
@@ -42,12 +46,12 @@ def inicio():
     if cantidad==1:
         nombreA=input("Nombre del Jugador1: ")
         nombreB=input("Nombre del enemigo: " )
-        print("******************************************************************************************")
+        print("****************************************************************************************************************************************************")
         print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",nombreB, " por la gloria.¿Estas listo para jugar?")
     else:
         nombreA=input("Nombre del Jugador1: ")
         nombreB=input("Nombre del Jugador2: ")
-        print("*******************************************************************************************")
+        print("****************************************************************************************************************************************************")
         print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
     
 # Usuario selecciona el tipo de preguntas que desea resolver:
@@ -107,6 +111,8 @@ def contadores():
             print ("Felicidades has derrotado a",villano,"!!")
         else:
             print (villano,"te ha vencido, intentalo en otra vida")
+
+# PREGUNTAS DE CULTURA GENERAL
   
 def preguntasCulturaGeneral():
     global ContadorA
@@ -191,6 +197,7 @@ def preguntasCulturaGeneral():
         print("Repuesta incorrecta")
     print("\n")
     
+# PREGUNTAS DE MARVEL
 
 def preguntasMarvel():
     global ContadorA
@@ -199,7 +206,7 @@ def preguntasMarvel():
     # PREGUNTA 1
     print("¿Quién es el maestro que le enseña las artes místicas a Dr.Strange?")
 
-    for i in opcionesCultura[0]:
+    for i in opcioneMarvel[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -213,7 +220,7 @@ def preguntasMarvel():
     # PREGUNTA 2   
     print("¿Quién cuida la gema? Y ¿A quien sacrifica Thanos para obtenerla?")
 
-    for i in opcionesCultura[1]:
+    for i in opcionesMarvel[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -225,7 +232,7 @@ def preguntasMarvel():
 
     # PREGUNTA 3
     print("¿En que lugar fue guardado la gema del espacio , tras los sucesos en el film Captain America?")
-    for i in opcionesCultura[2]:
+    for i in opcionesMarvel[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -238,7 +245,7 @@ def preguntasMarvel():
 
     # PREGUNTA 4
     print("¿Dónde era guardada la gema del poder, en Guardians of the Galaxy?")
-    for i in opcionesCultura[3]:
+    for i in opcionesMarvel[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -251,7 +258,7 @@ def preguntasMarvel():
 
     # PREGUNTA 5 
     print("¿Qué habilidades te otorga la gema de la realidad?")
-    for i in opcionesCultura[4]:
+    for i in opcionesMarvel[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -264,7 +271,7 @@ def preguntasMarvel():
 
     # PREGUNTA 6
     print("¿Quién le da la gema de la mente a visión (en los comics)?")
-    for i in opcionesCultura[5]:
+    for i in opcionesMarvel[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
