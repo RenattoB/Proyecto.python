@@ -13,14 +13,27 @@ ContadorB=0
 
 categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
 
+# ARREGLO DE CLAVES HISTORIA:
+
 opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
+
+# ARREGLO DE CLAVES CULTURA GENERAL:
 
 opcionesCultura=[["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"],["a. Odometro","b. Interferometro","c. Termometro"]
 ,["a. 1914","b. 1915","c. 1913"],["a. Oro","b. Diamante","c. Rodio"],["a. ReinoUnido","b. España","c. Francia"],["a. Biblia","b. Coran","c. Dhammapada"]]
 
+# ARREGLOS DE CLAVES MARVEL:
+
+opcionesMarvel=[["a. Normamu ","b. Voldemort" , "c. The Ancient"],["a. Red Skull and Gamora","b. Red Skull and minerva" , "c. Gamora and Red Skull"],["a. New York","b. El Pentagono (Nave SHIELD)" , "c. Asgard"]
+,["a. Aether","b. Chitauri Scepter" , "c. Orb"]
+,["a. Modifica las leyes de la realidad y Moldea las leyes de la física","b. Super velocidad y Viajar en el espacio-tiempo" , "c. Traspasar cosas solidad e inmunidad a las balas"]
+,["a. Iron man ","b. Thor" , "c. Wanda"]]
 
 
-#Funciones
+Respuesta="Default"
+
+
+# FUNCIONES
 def inicio():
     global ContadorErrores
     global nombreA
@@ -57,7 +70,7 @@ def inicio():
     elif cantidad==2:
         nombreA=input("Nombre del Jugador1: ")
         nombreB=input("Nombre del Jugador2: ")
-        print("*******************************************************************************************")
+        print("****************************************************************************************************************************************************")
         print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
     
 # Usuario selecciona el tipo de preguntas que desea resolver:
@@ -117,35 +130,46 @@ def contadores():
             print ("Felicidades has derrotado a",villano,"!!")
         else:
             print (villano,"te ha vencido, intentalo en otra vida")
-    
+
+# PREGUNTAS DE CULTURA GENERAL
+  
 def preguntasCulturaGeneral():
     global ContadorA
     global Respuesta
+
+    # PREGUNTA 1
     print("¿Quien escribio la Odisea?")
+
     for i in opcionesCultura[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+
     if Respuesta=="B" or Respuesta=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
-    else: 
+    else:   
         print("Respuesta incorrecta")
     print("\n")
-        
-    print("¿Con que instrumento se mide la temperatura")
+
+    # PREGUNTA 2   
+    print("¿Con que instrumento se mide la temperatura?")
+
     for i in opcionesCultura[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+
     if Respuesta=="C" or Respuesta=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
-    print("¿Cuando empezo la segunda guerra mundial?")
+    # PREGUNTA 3
+    print("¿En que año inicio la segunda guerra mundial?")
     for i in opcionesCultura[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+
     if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
@@ -153,10 +177,12 @@ def preguntasCulturaGeneral():
         print("Respuesta incorrecta")
     print("\n")
 
+    # PREGUNTA 4
     print("¿Cual es el metal mas caro del mundo?")
     for i in opcionesCultura[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+    
     if Respuesta=="C" or Respuesta=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
@@ -164,10 +190,12 @@ def preguntasCulturaGeneral():
         print("Respuesta incorrecta")
     print("\n")
 
-    print("¿En que pais se encuentra la universidad de Cambridge?")
+    # PREGUNTA 5 
+    print("¿En que pais se encuentra La Universidad de Cambridge?")
     for i in opcionesCultura[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+    
     if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
@@ -175,10 +203,12 @@ def preguntasCulturaGeneral():
         print("Respuesta incorrecta")
     print("\n")
 
+    # PREGUNTA 6
     print("¿Cual es el libro sagrado del Islam?")
     for i in opcionesCultura[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
+    
     if Respuesta=="B" or Respuesta=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
@@ -186,10 +216,91 @@ def preguntasCulturaGeneral():
         print("Repuesta incorrecta")
     print("\n")
     
-        
+# PREGUNTAS DE MARVEL
 
 def preguntasMarvel():
-    print ("Hola Marvel")
+    global ContadorA
+    global Respuesta
+
+    # PREGUNTA 1
+    print("¿Quién es el maestro que le enseña las artes místicas a Dr.Strange?")
+
+    for i in opcioneMarvel[0]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA = ContadorA + 1
+        print("Respuesta correcta tienes ",ContadorA," puntos") 
+    else:   
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 2   
+    print("¿Quién cuida la gema? Y ¿A quien sacrifica Thanos para obtenerla?")
+
+    for i in opcionesMarvel[1]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 3
+    print("¿En que lugar fue guardado la gema del espacio , tras los sucesos en el film Captain America?")
+    for i in opcionesMarvel[2]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 4
+    print("¿Dónde era guardada la gema del poder, en Guardians of the Galaxy?")
+    for i in opcionesMarvel[3]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 5 
+    print("¿Qué habilidades te otorga la gema de la realidad?")
+    for i in opcionesMarvel[4]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 6
+    print("¿Quién le da la gema de la mente a visión (en los comics)?")
+    for i in opcionesMarvel[5]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else:
+        print("Repuesta incorrecta")
+    print("\n")
+
 
 def preguntasMusica():
     print("Hola Musica")
