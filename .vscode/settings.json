@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "C:\\Python27\\ArcGIS10.4\\python.exe",
+=======
+    "python.pythonPath": "C:\\Users\\DARIEL\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+>>>>>>> 945529ff3bb8ddcec4ed3fb1783de29343d46386
     "python.linting.pylintEnabled": false
 }

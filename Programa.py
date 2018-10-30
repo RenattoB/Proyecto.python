@@ -14,14 +14,16 @@ elif a=="Cultura general":
     preguntasCulturaGeneral()
 elif a=="Marvel":
     print("Usted selecciono la categoria Marvel: ")
-    preguntasMarvel()
-    
+    preguntasMarvel()   
 elif a=="Musica":
     print("Usted selecciono la categoria de Musica: ")
     preguntasMusica()
 elif a=="Ciencia":
     print("Usted selecciono la categoria de Ciencia: ")
     preguntasCiencia()
+elif a=="Dibujos Animados":
+    print("Usted selecciono la categoria de Dibujos Animados: ")
+    preguntasDibujos()    
 else:
     print("Usted selecciono la categoria de Tecnologia: ")
     preguntasTecnologia()
