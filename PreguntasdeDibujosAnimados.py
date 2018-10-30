@@ -12,7 +12,7 @@
     B- Philip Ross
     C- Andy Johnson (RC)
 
-3- ¿Como se llamaban los mejores amigos de Jimmmy Neutro?
+3- ¿Como se llamaban los mejores amigos de Jimmmy Neutron?
     A- Sheen y Carl (RC)
     B- Sheen y Carman
     C- Carl y Shen
