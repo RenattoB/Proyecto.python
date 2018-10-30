@@ -1,3 +1,6 @@
+
+# Excepcion
+
 import sys
 
 # Variables
@@ -12,43 +15,63 @@ ContadorErrores=0
 ContadorA=0
 ContadorB=0
 
-categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Tecnologia"]
-
-# ARREGLO DE CLAVES -  HISTORIA:
-
-opcionesHistoria=[["a. 1976","b. 1876" , "c. 1567"],[],[],[]]
+categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","g) Tecnologia","f) Dibujos Animados"]
 
 # ARREGLO DE CLAVES - CULTURA GENERAL:
-opcionesCultura=[["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"]
+opcionesCultura = [["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"]
 ,["a. Odometro","b. Interferometro","c. Termometro"]
 ,["a. 1914","b. 1915","c. 1913"]
 ,["a. Oro","b. Diamante","c. Rodio"]
 ,["a. ReinoUnido","b. España","c. Francia"]
 ,["a. Biblia","b. Coran","c. Dhammapada"]]
 
-# ARREGLO DE CLAVES - MUSICA:
-opcionesCultura=[["a. Des O'Connor","B. Roy Orbison","C. Ozzy Osbourne"]
-,["a. Lead Piping ","b. Candlestick","c. Revolver"]
-,["a. Black Sabbath","b. Manfred Mann","c. Led Zeppelin"]
-,["a. 1983","b. 1978","c. 1988"]
-,["a. Linkin Park","b. Fort Minor","c. X-Ecutioners"]
-,["a. The White Rabbit","b. 8 mile","c. Stand"]]
-
 # ARREGLOS DE CLAVES - MARVEL:
-opcionesMarvel=[["a. Normamu ","b. Voldemort" , "c. The Ancient"]
+opcionesMarvel = [["a. Normamu ","b. Voldemort" , "c. The Ancient"]
 ,["a. Red Skull and Gamora","b. Red Skull and minerva" , "c. Gamora and Red Skull"]
 ,["a. New York","b. El Pentagono (Nave SHIELD)" , "c. Asgard"]
 ,["a. Aether","b. Chitauri Scepter" , "c. Orb"]
 ,["a. Modifica las leyes de la realidad y Moldea las leyes de la física","b. Super velocidad y Viajar en el espacio-tiempo" , "c. Traspasar cosas solidad e inmunidad a las balas"]
 ,["a. Iron man ","b. Thor" , "c. Wanda"]]
 
-# ARREGLO DE CLAVES - CIENCIA:
-opcionesCultura=[["a. Des O'Connor","B. Roy Orbison","C. Ozzy Osbourne"]
+# ARREGLO DE CLAVES - MUSICA:
+opcionesMusica = [["a. Des O'Connor","B. Roy Orbison","C. Ozzy Osbourne"]
 ,["a. Lead Piping ","b. Candlestick","c. Revolver"]
 ,["a. Black Sabbath","b. Manfred Mann","c. Led Zeppelin"]
 ,["a. 1983","b. 1978","c. 1988"]
 ,["a. Linkin Park","b. Fort Minor","c. X-Ecutioners"]
 ,["a. The White Rabbit","b. 8 mile","c. Stand"]]
+
+# ARREGLO DE CLAVES -  HISTORIA:
+opcionesHistoria = [["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]]
+
+# ARREGLO DE CLAVES - CIENCIA:
+opcionesCiencia = [["a. 1ra Ley de Newton","b. 2da Ley de Newton","c. 3ra Ley de Newton"]
+,["a. 17","b. 14","c. 12"]
+,["a. La temperatura","b. EL numero de atomos","c. El volumen "]
+,["a. Ne","b. Kr","c. N"]
+,["a. Cuando no existe la gravedad","b. Cuando no actuan fuerzas externas sobre el cuerpo ","c. Si el cuerpo posee una masa despreciable"]
+,["a. C - Grupo 15","b. Zn - Grupo 12","c. Ni - Grupo 14"]]
+
+# ARREGLO DE CLAVES - TECNOLOGIA:
+opcionesTecnologia = [["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]
+,["a. ","b. ","c. "]]
+
+# ARREGLO DE CLAVES - DIBUJOS ANIMADOS:
+opcionesDibujos = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]
+,["a. Mark Lenders","b. Philip Ross","c. Andy Johnson"]
+,["a. Sheen y Carl","b. Sheen y Carman","c. Carl y Shen"]
+,["a. Tutty","b. Trixie","c. Wanda"]
+,["a. Neptunoman","b. Chico Perseve","c. Sirenoman"]
+,["a. Tierra","b. Agua","c. Fuego"]]
 
 Respuesta="Default"
 
@@ -62,6 +85,8 @@ def inicio():
     global cantidad
     
 # MODO DE JUEGO
+
+## Excepcion:
 
     while True:
         ContadorErrores+=1
@@ -113,6 +138,8 @@ def categorias():
         categoria_elegida= "Historia"
     elif eleccion == "e" or eleccion == "E":
         categoria_elegida= "Ciencia"
+    elif eleccion == "f" or eleccion == "F":
+        categoria_elegida= "Dibujos Animados"
     else:
         categoria_elegida= "Tecnologia"
     return categoria_elegida
@@ -430,7 +457,7 @@ def preguntasCiencia():
     # PREGUNTA 1
     print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime"")
 
-    for i in opcioneMarvel[0]:
+    for i in opcioneCiencia[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -444,7 +471,7 @@ def preguntasCiencia():
     # PREGUNTA 2   
     print("¿Cual es el número atomico del Carbono?")
 
-    for i in opcionesMarvel[1]:
+    for i in opcionesCiencia[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -456,7 +483,7 @@ def preguntasCiencia():
 
     # PREGUNTA 3
     print("En un Proceso Isocóro se mantiene contante ........")
-    for i in opcionesMarvel[2]:
+    for i in opcionesCiencia[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -469,7 +496,7 @@ def preguntasCiencia():
 
     # PREGUNTA 4
     print("¿Cual de los siguientes elementos no pertenece al grupo de los Gases Nobles?")
-    for i in opcionesMarvel[3]:
+    for i in opcionesCiencia[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -482,7 +509,7 @@ def preguntasCiencia():
 
     # PREGUNTA 5 
     print("¿Cuando se considera un evento de Conservacion de Energia?")
-    for i in opcionesMarvel[4]:
+    for i in opcionesCiencia[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -495,7 +522,7 @@ def preguntasCiencia():
 
     # PREGUNTA 6
     print("¿Cual es la relacion incorrecta entre elemento - grupo en la tabla periodica ?")
-    for i in opcionesMarvel[5]:
+    for i in opcionesCiencia[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -506,8 +533,99 @@ def preguntasCiencia():
         print("Repuesta incorrecta")
     print("\n")
 
+'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
+
+# PREGUNTAS DE DIBUJOS ANIMADOS:
+
+def preguntasDibujos():
+    global ContadorA
+    global Respuesta
+
+    # PREGUNTA 1
+    print("¿Que tipo de relacion tiene Diego con Dora la exploradora?")
+
+    for i in opcioneDibujos[0]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA = ContadorA + 1
+        print("Respuesta correcta tienes ",ContadorA," puntos") 
+    else:   
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 2   
+    print("¿Como se llama el futbolista que sufria del corazon en Los super campeones?")
+
+    for i in opcionesDibujos[1]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 3
+    print("¿Como se llamaban los mejores amigos de Jimmmy Neutron?")
+    for i in opcionesDibujos[2]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 4
+    print("¿Como se llamaba la chica de la cual Timmy Turner estaba enamorado?")
+    for i in opcionesDibujos[3]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 5 
+    print("¿Cual era el nombre del heroe que admiraba Bob Esponja?")
+    for i in opcionesDibujos[4]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 6
+    print("¿En la serie Avatar cual fue el ultimo elemento que aprendio Aang?")
+    for i in opcionesDibujos[5]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else:
+        print("Repuesta incorrecta")
+    print("\n")
+
+'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
+
+# PREGUNTAS DE TECNOLOGIA:
+
 def preguntasTecnologia():
-    print("Hola Tecnologia")
+    
 
 
 
