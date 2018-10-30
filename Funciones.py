@@ -58,12 +58,12 @@ opcionesCiencia = [["a. 1ra Ley de Newton","b. 2da Ley de Newton","c. 3ra Ley de
 ,["a. C - Grupo 15","b. Zn - Grupo 12","c. Ni - Grupo 14"]]
 
 # ARREGLO DE CLAVES - TECNOLOGIA:
-opcionesTecnologia = [["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]]
+opcionesTecnologia = [["a. Una tableta robusta","b. Sitios de internet dedicados a la farmacéutica","c. Un dispositivo mezcla entre celular y tableta"]
+,["a. Un delincuente informático","b. Un virus muy peligroso","c. Una persona estudiosa y experta en tecnología"]
+,["a. Un código de ‘software’ con objetivo malicioso","b. Un virus de celular","c. Un trino de un político en campaña"]
+,["a. La cosa que forma el corazón de internet","b. La posibilidad de que cualquier cosa se conecte a internet","c. El internet que se usa en cualquier cosa"]
+,["a. Las comunicaciones 4G LTE celulares","b. Servicios informáticos que operan desde internet","c. Los datos que viajan sin cables por el cielo"]
+,["a. Gran cúmulo de información que se produce y existe en internet ","b. Es un supercomputador japonés","c. La gran cantidad de datos que hay en un computador"]]
 
 # ARREGLO DE CLAVES - DIBUJOS ANIMADOS:
 opcionesDibujos = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]
@@ -696,7 +696,89 @@ def preguntasDibujos():
 # PREGUNTAS DE TECNOLOGIA:
 
 def preguntasTecnologia():
-    print("Hola tecnologia")
+    global ContadorA
+    global Respuesta
+
+    # PREGUNTA 1
+    print("Una 'phablet' es: ")
+
+    for i in opcionesDibujos[0]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA = ContadorA + 1
+        print("Respuesta correcta tienes ",ContadorA," puntos") 
+    else:   
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 2   
+    print("¿Qué es un 'hacker'?")
+
+    for i in opcionesDibujos[1]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 3
+    print("¿Qué es un 'malware'?")
+    for i in opcionesDibujos[2]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 4
+    print("El 'internet de las cosas es': ")
+    for i in opcionesDibujos[3]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 5 
+    print("La 'computación en la nube' se le dice a: ")
+    for i in opcionesDibujos[4]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 6
+    print("'Big data' se conoce como: ")
+    for i in opcionesDibujos[5]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else:
+        print("Repuesta incorrecta")
+    print("\n") 
+
+    
 
 
 
