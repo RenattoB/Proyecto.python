@@ -351,7 +351,7 @@ def preguntasMusica():
     global Respuesta
 
     # PREGUNTA 1
-    print("¿ Que cantante era conocido como " The big O " ")
+    print("¿ Que cantante era conocido como 'The big O' " )
 
     for i in opcionesCultura[0]:
         print (i)
@@ -455,7 +455,7 @@ def preguntasCiencia():
     global Respuesta
 
     # PREGUNTA 1
-    print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime"")
+    print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime")
 
     for i in opcioneCiencia[0]:
         print (i)
@@ -625,7 +625,7 @@ def preguntasDibujos():
 # PREGUNTAS DE TECNOLOGIA:
 
 def preguntasTecnologia():
-    
+    print("Hola tecnologia")
 
 
 
