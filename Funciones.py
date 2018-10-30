@@ -42,12 +42,12 @@ opcionesMusica = [["a. Des O'Connor","B. Roy Orbison","C. Ozzy Osbourne"]
 ,["a. The White Rabbit","b. 8 mile","c. Stand"]]
 
 # ARREGLO DE CLAVES -  HISTORIA:
-opcionesHistoria = [["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]
-,["a. ","b. ","c. "]]
+opcionesHistoria = [["a. australiana - asiatico - oceanico","b. asiatico - australiano - africana","c. asiatica - oceanico - australiano"]
+,["a. Magicos y Didacticos","b. Filosoficos y Economicos","c. Religiosos y Politicos"]
+,["a. El monopolio del Comercio de Azucar","b. El impuesto al consumo de alcohol","c. La separacion de los funcionarios criollos"]
+,["a. La mineria y la agricultura","b. La plata y el tributo indigena","c. La mita obrajera y la plata"]
+,["a. Francia y Belgica","b. Estados unidos y Alemania","c. Inglaterra y Holanda"]
+,["a. El desplazamiento de la Hegemonia inglesa por la norteamericana","b. El surgimiento de una alianza entre la clase media y la burguesia limeña","c. La instauracion de un modelo de desarrollo bajo la hegemonia de la mineria"]]
 
 # ARREGLO DE CLAVES - CIENCIA:
 opcionesCiencia = [["a. 1ra Ley de Newton","b. 2da Ley de Newton","c. 3ra Ley de Newton"]
@@ -438,13 +438,84 @@ def preguntasHistoria():
     global ContadorA
     global Respuesta
 
-    print("¿En que año nacio Napoleon?")
+    # PREGUNTA 1
+    print("Las teorías inmigracionistas que explican el poblamiento de América son la de la procedencia... (Alex Hdrlicka), la de origen... (Paul Rivet) y la de procedencia... (Mendes Correia)." )
+
     for i in opcionesHistoria[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-    if Respuesta=="B" or "b":
+
+    if Respuesta=="C" or Respuesta=="c":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos") 
+    else:   
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 2   
+    print("Las pinturas rupestres con escenas de caza, halladas en las paredes de las cuevas de Lascaux y Altamira, fueron realizadas con propósitos.")
+
+    for i in opcionesHistoria[1]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="A" or Respuesta=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 3
+    print("Debido a los elevados gastos militares realizados por Inglaterra en la Guerra de los Siete Años contra Francia (1756-1763), el fisco quedó en ruina, motivo por el cual tuvo que adoptar medidas para generar ingresos. Una de estas fue...")
+    for i in opcionesHistoria[2]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 4
+    print("Luego de canceladas la mayoría de las encomiendas por la aplicación de las denominadas Nuevas Leyes (1542), la economía colonial estuvo basada en las rentas que proporcionaban ...")
+    for i in opcionesHistoria[3]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 5 
+    print("La segunda Revolución Industrial, caracterizada por el uso de nuevas fuentes de energía y la especialización de los procesos de trabajo se desarrolló a finales del siglo XIX en países como...")
+    for i in opcionesHistoria[4]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="B" or Respuesta=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else: 
+        print("Respuesta incorrecta")
+    print("\n")
+
+    # PREGUNTA 6
+    print("La ruptura de Augusto B. Leguía con el Partido Civil, hacia 1919, significó la culminación de un proceso económico iniciado a comienzos del siglo XX en el Perú. ¿Cuál fue su característica central?")
+    for i in opcionesHistoria[5]:
+        print (i)
+    Respuesta=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta=="A" or Respuesta=="a":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+    else:
+        print("Repuesta incorrecta")
+    print("\n")
 
 '''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
 
