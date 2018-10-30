@@ -1,4 +1,4 @@
-from Tkinter import *
+from tkinter import *
 
 raiz= Tk()
 
@@ -13,5 +13,9 @@ interfaz=Frame()
 interfaz.pack()
 
 interfaz.config(width="1280",height="720")
+
+interfaz.config(bd="30")
+
+interfaz.config(relief="groove")
 
 raiz.mainloop()
