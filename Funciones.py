@@ -4,7 +4,7 @@
 import sys
 
 # Variables
-
+villano="default"
 nombreA="default"
 nombreB="default"
 cantidad="default"
@@ -105,10 +105,10 @@ def inicio():
     
     if cantidad==1:
         nombreA=input("Nombre del Jugador1: ")
-        nombreB=input("Nombre del enemigo: " )
+        villano=input("Nombre del enemigo: " )
             
         print("****************************************************************************************************************************************************")
-        print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",nombreB, " por la gloria.¿Estas listo para jugar?")
+        print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",villano, " por la gloria.¿Estas listo para jugar?")
     
     elif cantidad==2:
         nombreA=input("Nombre del Jugador1: ")
@@ -265,7 +265,7 @@ def preguntasMarvel():
     # PREGUNTA 1
     print("¿Quién es el maestro que le enseña las artes místicas a Dr.Strange?")
 
-    for i in opcioneMarvel[0]:
+    for i in opcionesMarvel[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -457,7 +457,7 @@ def preguntasCiencia():
     # PREGUNTA 1
     print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime")
 
-    for i in opcioneCiencia[0]:
+    for i in opcionesCiencia[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -544,7 +544,7 @@ def preguntasDibujos():
     # PREGUNTA 1
     print("¿Que tipo de relacion tiene Diego con Dora la exploradora?")
 
-    for i in opcioneDibujos[0]:
+    for i in opcionesDibujos[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
