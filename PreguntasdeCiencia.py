@@ -1,4 +1,4 @@
-'''                 PREGUNTAS DE QUIMICA Y FISICA              '''
+'''                 PREGUNTAS DE CIENCIA            '''
 
 '''
 
