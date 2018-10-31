@@ -3,29 +3,28 @@ from Funciones import *
 
 #codigo
 inicio()
-a =categorias()
-
+a = elegir_categoria()
 
 if a== "Historia" :
-    print("Usted selecciono la categoria de Historia: ")
+    print("\n""Usted selecciono la categoria de Historia: ""\n")
     preguntasHistoria()
 elif a=="Cultura general":
-    print("Usted selecciono la categoria Cultura general: ")
+    print("\n""Usted selecciono la categoria Cultura general: ""\n")
     preguntasCulturaGeneral()
 elif a=="Marvel":
-    print("Usted selecciono la categoria Marvel: ")
+    print("\n""Usted selecciono la categoria Marvel: ""\n")
     preguntasMarvel()   
 elif a=="Musica":
-    print("Usted selecciono la categoria de Musica: ")
+    print("\n""Usted selecciono la categoria de Musica: ""\n")
     preguntasMusica()
 elif a=="Ciencia":
-    print("Usted selecciono la categoria de Ciencia: ")
+    print("\n""Usted selecciono la categoria de Ciencia: ""\n")
     preguntasCiencia()
 elif a=="Dibujos Animados":
-    print("Usted selecciono la categoria de Dibujos Animados: ")
+    print("\n""Usted selecciono la categoria de Dibujos Animados: ""\n")
     preguntasDibujos()    
 else:
-    print("Usted selecciono la categoria de Tecnologia: ")
+    print("\n""Usted selecciono la categoria de Tecnologia: ""\n")
     preguntasTecnologia()
 
 contadores()
