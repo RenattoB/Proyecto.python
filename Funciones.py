@@ -141,9 +141,11 @@ def contadores():
 def preguntasCulturaGeneral():
 
     global ContadorA
+    global ContadorB
     global Respuesta
 
     # PREGUNTA 1
+    print("ES EL TURNO DE ",nombreA)
     print("¿Quien escribio la Odisea?")
 
     for i in opcionesCultura[0]:
@@ -157,20 +159,23 @@ def preguntasCulturaGeneral():
         print("Respuesta incorrecta")
     print("\n")
 
-    # PREGUNTA 2   
+    # PREGUNTA 2
+    print("ES EL TURNO DE ",nombreB)   
     print("¿Con que instrumento se mide la temperatura?")
 
     for i in opcionesCultura[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
-    else: print("Respuesta incorrecta")
+    if Respuesta.lower()=="b":
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
+    else:
+        print("Repuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("ES EL TURNO DE ",nombreA)
     print("¿En que año inicio la segunda guerra mundial?")
     for i in opcionesCultura[2]:
         print (i)
@@ -184,25 +189,27 @@ def preguntasCulturaGeneral():
     print("\n")
 
     # PREGUNTA 4
+    print("ES EL TURNO DE ",nombreB)
     print("¿Cual es el metal mas caro del mundo?")
     for i in opcionesCultura[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
-    else: 
-        print("Respuesta incorrecta")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
+    else:
+        print("Repuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("ES EL TURNO DE ",nombreA)
     print("¿En que pais se encuentra La Universidad de Cambridge?")
     for i in opcionesCultura[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta.lower()=="a":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -210,14 +217,15 @@ def preguntasCulturaGeneral():
     print("\n")
 
     # PREGUNTA 6
+    print("ES EL TURNO DE ",nombreB)
     print("¿Cual es el libro sagrado del Islam?")
     for i in opcionesCultura[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+    if Respuesta.lower()=="a":
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
@@ -229,9 +237,11 @@ def preguntasCulturaGeneral():
 def preguntasMarvel():
  
     global ContadorA
+    global ContadorB
     global Respuesta
 
     # PREGUNTA 1
+    print("ES EL TURNO DE ",nombreA) 
     print("¿Quién es el maestro que le enseña las artes místicas a Dr.Strange?")
 
     for i in opcionesMarvel[0]:
@@ -245,7 +255,8 @@ def preguntasMarvel():
         print("Respuesta incorrecta")
     print("\n")
 
-    # PREGUNTA 2   
+    # PREGUNTA 2 
+    print("ES EL TURNO DE ",nombreB)   
     print("¿Quién cuida la gema? Y ¿A quien sacrifica Thanos para obtenerla?")
 
     for i in opcionesMarvel[1]:
@@ -253,12 +264,13 @@ def preguntasMarvel():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="a":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("ES EL TURNO DE ",nombreA) 
     print("¿En que lugar fue guardado la gema del espacio , tras los sucesos en el film Captain America?")
     for i in opcionesMarvel[2]:
         print (i)
@@ -272,19 +284,21 @@ def preguntasMarvel():
     print("\n")
 
     # PREGUNTA 4
+    print("ES EL TURNO DE ",nombreB) 
     print("¿Dónde era guardada la gema del poder, en Guardians of the Galaxy?")
     for i in opcionesMarvel[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
-    # PREGUNTA 5 
+    # PREGUNTA 5
+    print("ES EL TURNO DE ",nombreA)  
     print("¿Qué habilidades te otorga la gema de la realidad?")
     for i in opcionesMarvel[4]:
         print (i)
@@ -298,14 +312,15 @@ def preguntasMarvel():
     print("\n")
 
     # PREGUNTA 6
+    print("ES EL TURNO DE ",nombreB) 
     print("¿Quién le da la gema de la mente a visión (en los comics)?")
     for i in opcionesMarvel[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
@@ -317,9 +332,11 @@ def preguntasMarvel():
 def preguntasMusica():
 
     global ContadorA
+    global ContadorB
     global Respuesta
 
     # PREGUNTA 1
+    print("ES EL TURNO DE ",nombreA) 
     print("¿ Que cantante era conocido como 'The big O' " )
 
     for i in opcionesCultura[0]:
@@ -333,7 +350,8 @@ def preguntasMusica():
         print("Respuesta incorrecta")
     print("\n")
 
-    # PREGUNTA 2   
+    # PREGUNTA 2 
+    print("ES EL TURNO DE ",nombreB)   
     print("¿Cual de estos es el nombre de un álbum de los Beatles?")
 
     for i in opcionesCultura[1]:
@@ -341,12 +359,13 @@ def preguntasMusica():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("ES EL TURNO DE ",nombreA) 
     print("¿Que banda de rock fundó Jimmy Page en 1968?")
     for i in opcionesCultura[2]:
         print (i)
@@ -360,19 +379,21 @@ def preguntasMusica():
     print("\n")
 
     # PREGUNTA 4
+    print("ES EL TURNO DE ",nombreB) 
     print("¿En que año Culture Club obtuvo un numero 1 con Karma Chameleon?")
     for i in opcionesCultura[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="a":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("ES EL TURNO DE ",nombreA) 
     print("¿A cual de los siguientes grupos no pertenece Mike Shinoda?")
     for i in opcionesCultura[4]:
         print (i)
@@ -386,14 +407,15 @@ def preguntasMusica():
     print("\n")
 
     # PREGUNTA 6
+    print("ES EL TURNO DE ",nombreB) 
     print("¿Cual fue el nombre de la pelicula de Eminem?")
     for i in opcionesCultura[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
