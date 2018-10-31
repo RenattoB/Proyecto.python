@@ -17,7 +17,7 @@ ContadorB=0
 
 categorias =["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Dibujos Animados","g) Tecnologia""\n"]
 
-# ARREGLO DE CLAVES - CULTURA GENERAL:
+# ARREGLO DE CLAVES - CULTURA GENERALt:
 opcionesCultura = [["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"]
 ,["a. Odometro","b. Interferometro","c. Termometro"]
 ,["a. 1914","b. 1915","c. 1913"]
