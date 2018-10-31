@@ -126,23 +126,27 @@ def elegir_categoria():
     for i in categorias:
         print (" ",i," ")
 
-    eleccion = input("Digite la letra correspondiente a la categoria:  ")
-
-    if eleccion == "a" or eleccion == "A":
-        categoria_elegida= "Cultura general"
-    elif eleccion == "b" or eleccion == "B":
-        categoria_elegida= "Marvel"
-    elif eleccion == "c" or eleccion == "C":
-        categoria_elegida= "Musica"
-    elif eleccion == "d" or eleccion == "D":
-        categoria_elegida= "Historia"
-    elif eleccion == "e" or eleccion == "E":
-        categoria_elegida= "Ciencia"
-    elif eleccion == "f" or eleccion == "F":
-        categoria_elegida= "Dibujos Animados"
-    else:
-        categoria_elegida= "Tecnologia"
-    return categoria_elegida
+    while True:
+        eleccion = input("Digite la letra correspondiente a la categoria:  ")
+        if eleccion.lower()=="a" or eleccion.lower()=="b" or eleccion.lower()=="c" or eleccion.lower()=="d" or eleccion.lower()=="e" or eleccion.lower()=="f" or eleccion.lower()=="g":
+            if eleccion == "a" or eleccion == "A":
+                categoria_elegida= "Cultura general"            
+            elif eleccion == "b" or eleccion == "B":
+                categoria_elegida= "Marvel"
+            elif eleccion == "c" or eleccion == "C":
+                categoria_elegida= "Musica"
+            elif eleccion == "d" or eleccion == "D":
+                categoria_elegida= "Historia"
+            elif eleccion == "e" or eleccion == "E":
+                categoria_elegida= "Ciencia"
+            elif eleccion == "f" or eleccion == "F":
+                categoria_elegida= "Dibujos Animados"
+            else:
+                categoria_elegida= "Tecnologia"
+            return categoria_elegida
+            break
+        print("Digite una categoria valida por favor""\n")
+    
 
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
 def contadores():
