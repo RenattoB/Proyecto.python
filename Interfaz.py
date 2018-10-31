@@ -4,8 +4,6 @@ raiz= Tk()
 
 raiz.title("Infinite Questions Alpha")
 
-
-
 raiz .iconbitmap("game.ico")
 
 interfaz=Frame()

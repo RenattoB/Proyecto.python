@@ -156,7 +156,21 @@ def contadores():
         elif ContadorA < ContadorB:
             print("EL ganador es ",nombreB)
         else:
-            print("La victoria se decidira con una pregunta extra!!")
+            print("La victoria se decidira con una pregunta RANDOM!!")
+            pregunta_extra = input ("\n""De un avion salta un negro y un judio quien cae mas rapido?")
+            respuestaA = input (nombreA," dice: La respuesta es: ")
+                if respuestaA == "a" or respuestaA == "A":
+                    print ("Usted ha ganado")
+                else:
+                    print("Ha perdido")
+                    break
+            respuestaB = input (nombreB," dice: La respuesta es: ")
+                if respuestaB == "a" or respuestaB == "A":
+                    print ("Jugador ",nombreB," usted ha ganado!!!")
+                else:
+                    print("Ha perdido")
+                    break
+            print ("Gracias por juegar")
     else:
         print ("El participante ",nombreA," tiene ",ContadorA," puntos")
         
