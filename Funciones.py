@@ -151,6 +151,7 @@ def elegir_categoria():
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
 def contadores():
     
+
     if cantidad == 2:
         print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
         print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
@@ -161,19 +162,19 @@ def contadores():
             print("EL ganador es ",nombreB)
         else:
             print("La victoria se decidira con una pregunta RANDOM!!")
-            pregunta_extra = input ("\n""De un avion salta un negro y un judio quien cae mas rapido?")
-            respuestaA = input (nombreA," dice: La respuesta es: ")
-                if respuestaA == "a" or respuestaA == "A":
-                    print ("Usted ha ganado")
-                else:
-                    print("Ha perdido")
-                    break
-            respuestaB = input (nombreB," dice: La respuesta es: ")
-                if respuestaB == "a" or respuestaB == "A":
-                    print ("Jugador ",nombreB," usted ha ganado!!!")
-                else:
-                    print("Ha perdido")
-                    break
+            print("\n""De un avion salta un negro y un judio quien cae mas rapido?")
+            respuestaA = input(nombreA," dice: La respuesta es: ")
+            if respuestaA.lower() == "a" :
+                print("Usted ha ganado")
+            else:
+                print("Ha perdido")
+                    
+            respuestaB = input(nombreB," dice: La respuesta es: ")
+            if respuestaB == "a" or respuestaB == "A":
+                print("Jugador ",nombreB," usted ha ganado!!!")
+            else:
+                print("Ha perdido")
+                    
             print ("Gracias por juegar")
     else:
         print ("El participante ",nombreA," tiene ",ContadorA," puntos")
@@ -198,8 +199,8 @@ def preguntasCulturaGeneral():
     for i in opcionesCultura[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
-
-    if Respuesta=="B" or Respuesta=="b":
+    
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -213,7 +214,7 @@ def preguntasCulturaGeneral():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -225,7 +226,7 @@ def preguntasCulturaGeneral():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -238,7 +239,7 @@ def preguntasCulturaGeneral():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -251,7 +252,7 @@ def preguntasCulturaGeneral():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -264,7 +265,7 @@ def preguntasCulturaGeneral():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -301,7 +302,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -313,7 +314,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -326,7 +327,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -339,7 +340,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -352,7 +353,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -375,7 +376,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -389,7 +390,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -401,7 +402,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -414,7 +415,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -427,7 +428,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -440,7 +441,7 @@ def preguntasMusica():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -463,7 +464,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -477,7 +478,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -489,7 +490,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -502,7 +503,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -515,7 +516,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -528,7 +529,7 @@ def preguntasHistoria():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -550,7 +551,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA = ContadorA + 1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -564,7 +565,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -576,7 +577,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -589,7 +590,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -602,7 +603,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -615,7 +616,7 @@ def preguntasCiencia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -637,7 +638,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA = ContadorA + 1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -651,7 +652,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -663,7 +664,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -676,7 +677,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -689,7 +690,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -702,7 +703,7 @@ def preguntasDibujos():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
@@ -724,7 +725,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA = ContadorA + 1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -738,7 +739,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: print("Respuesta incorrecta")
@@ -750,7 +751,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -763,7 +764,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -776,7 +777,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="B" or Respuesta=="b":
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else: 
@@ -789,7 +790,7 @@ def preguntasTecnologia():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
-    if Respuesta=="A" or Respuesta=="a":
+    if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
         print("Respuesta correcta tienes ",ContadorA," puntos")
     else:
