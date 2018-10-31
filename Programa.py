@@ -9,7 +9,7 @@ if a== "Historia" :
     print("\n""Usted selecciono la categoria de Historia: ""\n")
     preguntasHistoria()
 elif a=="Cultura general":
-    print("\n""Usted selecciono la categoria Cultura general: ""\n")1
+    print("\n""Usted selecciono la categoria Cultura general: ""\n")
     preguntasCulturaGeneral()
 elif a=="Marvel":
     print("\n""Usted selecciono la categoria Marvel: ""\n")
