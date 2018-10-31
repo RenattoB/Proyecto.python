@@ -4,7 +4,6 @@
 import sys
 
 # Variables
-villano="default"
 nombreA="default"
 nombreB="default"
 cantidad="default"
@@ -81,40 +80,14 @@ def inicio():
     global ContadorErrores
     global nombreA
     global nombreB
-    global villano
     global cantidad
     
-# MODO DE JUEGO
-
-## Excepcion:
-
-    while True:
-        ContadorErrores+=1
-        if ContadorErrores==5:
-            print("Numero de veces equivocado excedido""\n""Programa finalizado")
-            sys.exit()
-        try:
-            cantidad=int(input("\n""¿Cuantos jugadores jugaran? 1 o 2: "))
-            if cantidad==1 or cantidad==2:
-                break
-            print("Cantidad invalida""\n""Por favor introduzca una cantidad valida")
-        except:
-            print("Entrada incorrecta, por favor ingrese un numero entero")
-
 # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
-    
-    if cantidad==1:
-        nombreA=input("Nombre del Jugador: ")
-        villano=input("Nombre del Enemigo: " )
-            
-        print("****************************************************************************************************************************************************")
-        print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",villano, " por la gloria. ¿Estas listo para jugar?")
-    
-    elif cantidad==2:
-        nombreA=input("Nombre del Jugador1: ")
-        nombreB=input("Nombre del Jugador2: ")
-        print("****************************************************************************************************************************************************")
-        print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
+
+    nombreA=input("Nombre del Jugador1: ")
+    nombreB=input("Nombre del Jugador2: ")
+    print("****************************************************************************************************************************************************")
+    print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
     
 # USUARIO SELECCIONA LA CATEGORIA DE PREGUNTAS
 
@@ -151,38 +124,15 @@ def elegir_categoria():
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
 def contadores():
     
+    print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
+    print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
 
-    if cantidad == 2:
-        print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
-        print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
-
-        if ContadorA > ContadorB:
-            print("El ganador es ",nombreA)
-        elif ContadorA < ContadorB:
-            print("EL ganador es ",nombreB)
-        else:
-            print("La victoria se decidira con una pregunta RANDOM!!")
-            print("\n""De un avion salta un negro y un judio quien cae mas rapido?")
-            respuestaA = input(nombreA," dice: La respuesta es: ")
-            if respuestaA.lower() == "a" :
-                print("Usted ha ganado")
-            else:
-                print("Ha perdido")
-                    
-            respuestaB = input(nombreB," dice: La respuesta es: ")
-            if respuestaB == "a" or respuestaB == "A":
-                print("Jugador ",nombreB," usted ha ganado!!!")
-            else:
-                print("Ha perdido")
-                    
-            print ("Gracias por juegar")
+    if ContadorA > ContadorB:
+        print("El ganador es ",nombreA)
+    elif ContadorA < ContadorB:
+        print("EL ganador es ",nombreB)
     else:
-        print ("El participante ",nombreA," tiene ",ContadorA," puntos")
-        
-        if ContadorA == 5:
-            print ("Felicidades has derrotado a",villano,"!!")
-        else:
-            print (villano,"te ha vencido, intentalo en otra vida")
+        print("La victoria se decidira con una pregunta RANDOM!!")
 
 '''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
 
