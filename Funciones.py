@@ -82,7 +82,7 @@ def inicio():
     global nombreB
     global cantidad
     
-# NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
+    # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
     nombreA=input("Nombre del Jugador1: ")
     nombreB=input("Nombre del Jugador2: ")
@@ -425,11 +425,14 @@ def preguntasMusica():
 # PREGUNTAS DE HISTORIA
 
 def preguntasHistoria():
-
+    global ContadorB
     global ContadorA
     global Respuesta
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
+    print("Turno de", nombreA)
     print("Las teorías inmigracionistas que explican el poblamiento de América son la de la procedencia... (Alex Hdrlicka), la de origen... (Paul Rivet) y la de procedencia... (Mendes Correia)." )
 
     for i in opcionesHistoria[0]:
@@ -444,6 +447,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 2   
+    print("Turno de", nombreB)
     print("Las pinturas rupestres con escenas de caza, halladas en las paredes de las cuevas de Lascaux y Altamira, fueron realizadas con propósitos.")
 
     for i in opcionesHistoria[1]:
@@ -451,12 +455,13 @@ def preguntasHistoria():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="a":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("Turno de", nombreA)
     print("Debido a los elevados gastos militares realizados por Inglaterra en la Guerra de los Siete Años contra Francia (1756-1763), el fisco quedó en ruina, motivo por el cual tuvo que adoptar medidas para generar ingresos. Una de estas fue...")
     for i in opcionesHistoria[2]:
         print (i)
@@ -470,19 +475,21 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 4
+    print("Turno de", nombreB)
     print("Luego de canceladas la mayoría de las encomiendas por la aplicación de las denominadas Nuevas Leyes (1542), la economía colonial estuvo basada en las rentas que proporcionaban ...")
     for i in opcionesHistoria[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("Turno de", nombreA)
     print("La segunda Revolución Industrial, caracterizada por el uso de nuevas fuentes de energía y la especialización de los procesos de trabajo se desarrolló a finales del siglo XIX en países como...")
     for i in opcionesHistoria[4]:
         print (i)
@@ -496,14 +503,15 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 6
+    print("Turno de", nombreB)
     print("La ruptura de Augusto B. Leguía con el Partido Civil, hacia 1919, significó la culminación de un proceso económico iniciado a comienzos del siglo XX en el Perú. ¿Cuál fue su característica central?")
     for i in opcionesHistoria[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="a":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
@@ -514,9 +522,13 @@ def preguntasHistoria():
 
 def preguntasCiencia():
     global ContadorA
+    global ContadorB
     global Respuesta
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
+    print("Turno de", nombreA)
     print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime")
 
     for i in opcionesCiencia[0]:
@@ -531,6 +543,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 2   
+    print("Turno de", nombreB)
     print("¿Cual es el número atomico del Carbono?")
 
     for i in opcionesCiencia[1]:
@@ -538,12 +551,13 @@ def preguntasCiencia():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("Turno de", nombreA)
     print("En un Proceso Isocóro se mantiene contante ........")
     for i in opcionesCiencia[2]:
         print (i)
@@ -557,19 +571,21 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 4
+    print("Turno de", nombreB)
     print("¿Cual de los siguientes elementos no pertenece al grupo de los Gases Nobles?")
     for i in opcionesCiencia[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("Turno de", nombreA)
     print("¿Cuando se considera un evento de Conservacion de Energia?")
     for i in opcionesCiencia[4]:
         print (i)
@@ -583,14 +599,15 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 6
+    print("Turno de", nombreB)
     print("¿Cual es la relacion incorrecta entre elemento - grupo en la tabla periodica ?")
     for i in opcionesCiencia[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
@@ -601,9 +618,13 @@ def preguntasCiencia():
 
 def preguntasDibujos():
     global ContadorA
+    global ContadorB
     global Respuesta
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
+    print("Turno de", nombreA)
     print("¿Que tipo de relacion tiene Diego con Dora la exploradora?")
 
     for i in opcionesDibujos[0]:
@@ -618,6 +639,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 2   
+    print("Turno de", nombreB)
     print("¿Como se llama el futbolista que sufria del corazon en Los super campeones?")
 
     for i in opcionesDibujos[1]:
@@ -625,12 +647,13 @@ def preguntasDibujos():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("Turno de", nombreA)
     print("¿Como se llamaban los mejores amigos de Jimmmy Neutron?")
     for i in opcionesDibujos[2]:
         print (i)
@@ -644,19 +667,21 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 4
+    print("Turno de", nombreB)
     print("¿Como se llamaba la chica de la cual Timmy Turner estaba enamorado?")
     for i in opcionesDibujos[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("Turno de", nombreA)
     print("¿Cual era el nombre del heroe que admiraba Bob Esponja?")
     for i in opcionesDibujos[4]:
         print (i)
@@ -670,14 +695,15 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 6
+    print("Turno de", nombreB)
     print("¿En la serie Avatar cual fue el ultimo elemento que aprendio Aang?")
     for i in opcionesDibujos[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n")
@@ -689,8 +715,12 @@ def preguntasDibujos():
 def preguntasTecnologia():
     global ContadorA
     global Respuesta
+    global ContadorB
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
+    print("Turno de", nombreA)
     print("Una 'phablet' es: ")
 
     for i in opcionesDibujos[0]:
@@ -705,6 +735,7 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 2   
+    print("Turno de", nombreB)
     print("¿Qué es un 'hacker'?")
 
     for i in opcionesDibujos[1]:
@@ -712,12 +743,13 @@ def preguntasTecnologia():
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
     if Respuesta.lower()=="c":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 3
+    print("Turno de", nombreA)
     print("¿Qué es un 'malware'?")
     for i in opcionesDibujos[2]:
         print (i)
@@ -731,19 +763,21 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 4
+    print("Turno de", nombreB)
     print("El 'internet de las cosas es': ")
     for i in opcionesDibujos[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="b":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else: 
         print("Respuesta incorrecta")
     print("\n")
 
     # PREGUNTA 5 
+    print("Turno de", nombreA)
     print("La 'computación en la nube' se le dice a: ")
     for i in opcionesDibujos[4]:
         print (i)
@@ -757,14 +791,15 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 6
+    print("Turno de", nombreB)
     print("'Big data' se conoce como: ")
     for i in opcionesDibujos[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
     if Respuesta.lower()=="a":
-        ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
     else:
         print("Repuesta incorrecta")
     print("\n") 
