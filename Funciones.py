@@ -15,7 +15,7 @@ ContadorErrores=0
 ContadorA=0
 ContadorB=0
 
-categorias_array=["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","g) Tecnologia","f) Dibujos Animados"]
+categorias =["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Dibujos Animados","g) Tecnologia""\n"]
 
 # ARREGLO DE CLAVES - CULTURA GENERAL:
 opcionesCultura = [["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"]
@@ -94,7 +94,7 @@ def inicio():
             print("Numero de veces equivocado excedido""\n""Programa finalizado")
             sys.exit()
         try:
-            cantidad=int(input("¿Cuantos jugadores jugaran? 1 o 2: "))
+            cantidad=int(input("\n""¿Cuantos jugadores jugaran? 1 o 2: "))
             if cantidad==1 or cantidad==2:
                 break
             print("Cantidad invalida""\n""Por favor introduzca una cantidad valida")
@@ -104,11 +104,11 @@ def inicio():
 # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
     
     if cantidad==1:
-        nombreA=input("Nombre del Jugador1: ")
-        villano=input("Nombre del enemigo: " )
+        nombreA=input("Nombre del Jugador: ")
+        villano=input("Nombre del Enemigo: " )
             
         print("****************************************************************************************************************************************************")
-        print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",villano, " por la gloria.¿Estas listo para jugar?")
+        print ("Hola ",nombreA, "bienvenido a la alpha del juego, usted se enfrentara contra ",villano, " por la gloria. ¿Estas listo para jugar?")
     
     elif cantidad==2:
         nombreA=input("Nombre del Jugador1: ")
@@ -118,12 +118,12 @@ def inicio():
     
 # USUARIO SELECCIONA LA CATEGORIA DE PREGUNTAS
 
-def categorias():
+def elegir_categoria():
     global categoria_elegida
         
-    print("Las categorias disponibles son: ")
-    
-    for i in categorias_array:
+    print("\n""Las categorias disponibles son: ""\n")
+
+    for i in categorias:
         print (" ",i," ")
 
     eleccion = input("Digite la letra correspondiente a la categoria:  ")
@@ -143,13 +143,13 @@ def categorias():
     else:
         categoria_elegida= "Tecnologia"
     return categoria_elegida
- 
+
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
 def contadores():
     
     if cantidad == 2:
-        print ("El participante ",nombreA," tiene ",ContadorA," puntos")
-        print ("El participante ",nombreB," tiene ",ContadorB," puntos")
+        print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
+        print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
 
         if ContadorA > ContadorB:
             print("El ganador es ",nombreA)
@@ -777,11 +777,3 @@ def preguntasTecnologia():
     else:
         print("Repuesta incorrecta")
     print("\n") 
-
-    
-
-
-
-    
-    
-
