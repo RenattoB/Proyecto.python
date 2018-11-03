@@ -26,5 +26,5 @@ elif a=="Dibujos Animados":
 else:
     print("\n""Usted selecciono la categoria de Tecnologia: ""\n")
     preguntasTecnologia()
-
+    
 contadores()

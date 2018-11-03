@@ -73,7 +73,7 @@ opcionesDibujos = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]
 ,["a. Tierra","b. Agua","c. Fuego"]]
 
 # ARREGLO PREGUNTA EXTRA
-opcionesPreguntaExtra = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]]
+opcionesPreguntaExtra = [["a. Masa","b. Dureza","c. Peso"]]
 
 Respuesta="Default"
 
@@ -87,6 +87,7 @@ def inicio():
     
     # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
+    print("\n""DIGITEN SUS RESPECTIVOS NICK NAMES: ")
     nombreA=input("Nombre del Jugador1: ")
     nombreB=input("Nombre del Jugador2: ")
     print("****************************************************************************************************************************************************")
@@ -121,13 +122,15 @@ def elegir_categoria():
                 categoria_elegida= "Tecnologia"
             return categoria_elegida
             break
-            
+
         print("Digite una categoria valida por favor""\n")
     
 
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
 def contadores():
     
+    global preguntaExtra
+
     print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
     print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
 
@@ -137,8 +140,45 @@ def contadores():
         print("EL ganador es ",nombreB)
     else:
         print("La victoria se decidira con una pregunta RANDOM!!")
+        preguntaExtra()
 
+'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
 
+# PREGUNTA EXTRA
+  
+def preguntaExtra():
+
+    global ContadorA
+    global ContadorB
+    global RespuestaA
+    global RespuestaB
+    global nombreA
+    global nombreB
+
+    # PREGUNTA 
+
+    print("¿Cual de las siguientes opciones no es una propiedad general de la materia?")
+
+    print ( opcionesPreguntaExtra[0] )
+    
+    RespuestaA = input(nombreA, " ingrese la letra de su respuesta: ")
+    RespuestaB = input(nombreB, " ingrese la letra de su respuesta: ")
+
+    if RespuestaA.lower()=="b":
+        ContadorA=ContadorA+1
+        print("Respuesta correcta tienes ",ContadorA," puntos")
+        print("Usted ha ganado")
+    elif RespuestaB.lower()=="b":
+        ContadorB=ContadorB+1
+        print("Respuesta correcta tienes ",ContadorB," puntos")
+        print("Usted ha ganado")
+    elif RespuestaA.lower()=="b" and RespuestaB.lower()=="b":
+        ContadorA=ContadorA+1
+        ContadorB=ContadorB+1
+        print("La batalla finalizo como un empate")
+    else:   
+        print("Ambos perdieron, intentelo en otra categoria")
+    print("\n")
 
 '''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
 
