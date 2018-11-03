@@ -26,3 +26,5 @@
     A- El desplazamiento de la Hegemonia inglesa por la norteamericana (RC)
     B- El surgimiento de una alianza entre la clase media y la burguesia limeña
     C- La instauracion de un modelo de desarrollo bajo la hegemonia de la mineria
+
+'''

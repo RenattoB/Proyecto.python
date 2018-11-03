@@ -1,4 +1,4 @@
-                            '''PREGUNTAS DE MARVEL'''
+'''                         PREGUNTAS DE MARVEL             '''
 
 '''
 1- ¿Quién es el maestro que le enseña las artes místicas a Dr.Strange?

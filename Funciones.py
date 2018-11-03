@@ -16,13 +16,13 @@ ContadorB=0
 
 categorias =["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Dibujos Animados","g) Tecnologia""\n"]
 
-# ARREGLO DE CLAVES - CULTURA GENERALt:
-opcionesCultura = [["a. Mario Vargas Llosa","B. Homero","C. Pablo Neruda"]
-,["a. Odometro","b. Interferometro","c. Termometro"]
+# ARREGLO DE CLAVES - CULTURA GENERAL:
+opcionesCultura = [["a. Mario Vargas Llosa","b. Homero","c. Pablo Neruda"]
+,["a. Odometro","b. Termometro","c. Interferómetro"]
 ,["a. 1914","b. 1915","c. 1913"]
 ,["a. Oro","b. Diamante","c. Rodio"]
-,["a. ReinoUnido","b. España","c. Francia"]
-,["a. Biblia","b. Coran","c. Dhammapada"]]
+,["a. España","b. Reino Unido","c. Francia"]
+,["a. Coran","b. Biblia","c. Dhammapada"]]
 
 # ARREGLOS DE CLAVES - MARVEL:
 opcionesMarvel = [["a. Normamu ","b. Voldemort" , "c. The Ancient"]
@@ -51,7 +51,7 @@ opcionesHistoria = [["a. australiana - asiatico - oceanico","b. asiatico - austr
 # ARREGLO DE CLAVES - CIENCIA:
 opcionesCiencia = [["a. 1ra Ley de Newton","b. 2da Ley de Newton","c. 3ra Ley de Newton"]
 ,["a. 17","b. 14","c. 12"]
-,["a. La temperatura","b. EL numero de atomos","c. El volumen "]
+,["a. La Temperatura","b. EL Número de atomos","c. El Volumen "]
 ,["a. Ne","b. Kr","c. N"]
 ,["a. Cuando no existe la gravedad","b. Cuando no actuan fuerzas externas sobre el cuerpo ","c. Si el cuerpo posee una masa despreciable"]
 ,["a. C - Grupo 15","b. Zn - Grupo 12","c. Ni - Grupo 14"]]
@@ -71,6 +71,9 @@ opcionesDibujos = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]
 ,["a. Tutty","b. Trixie","c. Wanda"]
 ,["a. Neptunoman","b. Chico Perseve","c. Sirenoman"]
 ,["a. Tierra","b. Agua","c. Fuego"]]
+
+# ARREGLO PREGUNTA EXTRA
+opcionesPreguntaExtra = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]]
 
 Respuesta="Default"
 
@@ -118,6 +121,7 @@ def elegir_categoria():
                 categoria_elegida= "Tecnologia"
             return categoria_elegida
             break
+            
         print("Digite una categoria valida por favor""\n")
     
 
@@ -134,6 +138,8 @@ def contadores():
     else:
         print("La victoria se decidira con una pregunta RANDOM!!")
 
+
+
 '''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
 
 # PREGUNTAS DE CULTURA GENERAL
@@ -143,6 +149,8 @@ def preguntasCulturaGeneral():
     global ContadorA
     global ContadorB
     global Respuesta
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
     print("ES EL TURNO DE ",nombreA)
@@ -239,6 +247,8 @@ def preguntasMarvel():
     global ContadorA
     global ContadorB
     global Respuesta
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
     print("ES EL TURNO DE ",nombreA) 
@@ -332,14 +342,16 @@ def preguntasMarvel():
 def preguntasMusica():
 
     global ContadorA
-    global ContadorB
     global Respuesta
+    global ContadorB
+    global nombreA
+    global nombreB
 
     # PREGUNTA 1
     print("ES EL TURNO DE ",nombreA) 
     print("¿ Que cantante era conocido como 'The big O' " )
 
-    for i in opcionesCultura[0]:
+    for i in opcionesMusica[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -354,7 +366,7 @@ def preguntasMusica():
     print("ES EL TURNO DE ",nombreB)   
     print("¿Cual de estos es el nombre de un álbum de los Beatles?")
 
-    for i in opcionesCultura[1]:
+    for i in opcionesMusica[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -367,7 +379,7 @@ def preguntasMusica():
     # PREGUNTA 3
     print("ES EL TURNO DE ",nombreA) 
     print("¿Que banda de rock fundó Jimmy Page en 1968?")
-    for i in opcionesCultura[2]:
+    for i in opcionesMusica[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -381,7 +393,7 @@ def preguntasMusica():
     # PREGUNTA 4
     print("ES EL TURNO DE ",nombreB) 
     print("¿En que año Culture Club obtuvo un numero 1 con Karma Chameleon?")
-    for i in opcionesCultura[3]:
+    for i in opcionesMusica[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -395,7 +407,7 @@ def preguntasMusica():
     # PREGUNTA 5 
     print("ES EL TURNO DE ",nombreA) 
     print("¿A cual de los siguientes grupos no pertenece Mike Shinoda?")
-    for i in opcionesCultura[4]:
+    for i in opcionesMusica[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -409,7 +421,7 @@ def preguntasMusica():
     # PREGUNTA 6
     print("ES EL TURNO DE ",nombreB) 
     print("¿Cual fue el nombre de la pelicula de Eminem?")
-    for i in opcionesCultura[5]:
+    for i in opcionesMusica[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -432,7 +444,7 @@ def preguntasHistoria():
     global nombreB
 
     # PREGUNTA 1
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("Las teorías inmigracionistas que explican el poblamiento de América son la de la procedencia... (Alex Hdrlicka), la de origen... (Paul Rivet) y la de procedencia... (Mendes Correia)." )
 
     for i in opcionesHistoria[0]:
@@ -447,7 +459,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 2   
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("Las pinturas rupestres con escenas de caza, halladas en las paredes de las cuevas de Lascaux y Altamira, fueron realizadas con propósitos.")
 
     for i in opcionesHistoria[1]:
@@ -461,7 +473,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 3
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("Debido a los elevados gastos militares realizados por Inglaterra en la Guerra de los Siete Años contra Francia (1756-1763), el fisco quedó en ruina, motivo por el cual tuvo que adoptar medidas para generar ingresos. Una de estas fue...")
     for i in opcionesHistoria[2]:
         print (i)
@@ -475,7 +487,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 4
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("Luego de canceladas la mayoría de las encomiendas por la aplicación de las denominadas Nuevas Leyes (1542), la economía colonial estuvo basada en las rentas que proporcionaban ...")
     for i in opcionesHistoria[3]:
         print (i)
@@ -489,7 +501,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 5 
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("La segunda Revolución Industrial, caracterizada por el uso de nuevas fuentes de energía y la especialización de los procesos de trabajo se desarrolló a finales del siglo XIX en países como...")
     for i in opcionesHistoria[4]:
         print (i)
@@ -503,7 +515,7 @@ def preguntasHistoria():
     print("\n")
 
     # PREGUNTA 6
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("La ruptura de Augusto B. Leguía con el Partido Civil, hacia 1919, significó la culminación de un proceso económico iniciado a comienzos del siglo XX en el Perú. ¿Cuál fue su característica central?")
     for i in opcionesHistoria[5]:
         print (i)
@@ -528,7 +540,7 @@ def preguntasCiencia():
     global nombreB
 
     # PREGUNTA 1
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("Cual de las 3 Leyes de Newton hace referencia la siguiente frase: El cambio de movimient es directamente proporcional a la fuerza motriz impresa y ocurre según la línea recta a lo largo de la cual aquella fuerza se imprime")
 
     for i in opcionesCiencia[0]:
@@ -543,7 +555,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 2   
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Cual es el número atomico del Carbono?")
 
     for i in opcionesCiencia[1]:
@@ -557,7 +569,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 3
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("En un Proceso Isocóro se mantiene contante ........")
     for i in opcionesCiencia[2]:
         print (i)
@@ -571,7 +583,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 4
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Cual de los siguientes elementos no pertenece al grupo de los Gases Nobles?")
     for i in opcionesCiencia[3]:
         print (i)
@@ -585,7 +597,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 5 
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("¿Cuando se considera un evento de Conservacion de Energia?")
     for i in opcionesCiencia[4]:
         print (i)
@@ -599,7 +611,7 @@ def preguntasCiencia():
     print("\n")
 
     # PREGUNTA 6
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Cual es la relacion incorrecta entre elemento - grupo en la tabla periodica ?")
     for i in opcionesCiencia[5]:
         print (i)
@@ -624,7 +636,7 @@ def preguntasDibujos():
     global nombreB
 
     # PREGUNTA 1
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE " ,nombreA)
     print("¿Que tipo de relacion tiene Diego con Dora la exploradora?")
 
     for i in opcionesDibujos[0]:
@@ -639,7 +651,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 2   
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Como se llama el futbolista que sufria del corazon en Los super campeones?")
 
     for i in opcionesDibujos[1]:
@@ -653,7 +665,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 3
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("¿Como se llamaban los mejores amigos de Jimmmy Neutron?")
     for i in opcionesDibujos[2]:
         print (i)
@@ -667,7 +679,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 4
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Como se llamaba la chica de la cual Timmy Turner estaba enamorado?")
     for i in opcionesDibujos[3]:
         print (i)
@@ -681,7 +693,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 5 
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("¿Cual era el nombre del heroe que admiraba Bob Esponja?")
     for i in opcionesDibujos[4]:
         print (i)
@@ -695,7 +707,7 @@ def preguntasDibujos():
     print("\n")
 
     # PREGUNTA 6
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿En la serie Avatar cual fue el ultimo elemento que aprendio Aang?")
     for i in opcionesDibujos[5]:
         print (i)
@@ -720,10 +732,10 @@ def preguntasTecnologia():
     global nombreB
 
     # PREGUNTA 1
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("Una 'phablet' es: ")
 
-    for i in opcionesDibujos[0]:
+    for i in opcionesTecnologia[0]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -735,10 +747,10 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 2   
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("¿Qué es un 'hacker'?")
 
-    for i in opcionesDibujos[1]:
+    for i in opcionesTecnologia[1]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -749,9 +761,9 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 3
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("¿Qué es un 'malware'?")
-    for i in opcionesDibujos[2]:
+    for i in opcionesTecnologia[2]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
@@ -763,9 +775,9 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 4
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("El 'internet de las cosas es': ")
-    for i in opcionesDibujos[3]:
+    for i in opcionesTecnologia[3]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -777,9 +789,9 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 5 
-    print("Turno de", nombreA)
+    print("ES EL TURNO DE ", nombreA)
     print("La 'computación en la nube' se le dice a: ")
-    for i in opcionesDibujos[4]:
+    for i in opcionesTecnologia[4]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
@@ -791,9 +803,9 @@ def preguntasTecnologia():
     print("\n")
 
     # PREGUNTA 6
-    print("Turno de", nombreB)
+    print("ES EL TURNO DE ", nombreB)
     print("'Big data' se conoce como: ")
-    for i in opcionesDibujos[5]:
+    for i in opcionesTecnologia[5]:
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
     
