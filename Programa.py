@@ -1,8 +1,10 @@
-#Entrada
+
 from Funciones import *
 
-#codigo
+# ENTRADA 
 inicio()
+
+# PROCESO
 a = elegir_categoria()
 
 if a== "Historia" :
@@ -26,5 +28,7 @@ elif a=="Dibujos Animados":
 else:
     print("\n""Usted selecciono la categoria de Tecnologia: ""\n")
     preguntasTecnologia()
-    
+
+# SALIDA   
 contadores()
+

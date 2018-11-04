@@ -14,6 +14,7 @@ ContadorErrores=0
 ContadorA=0
 ContadorB=0
 
+
 categorias =["a) Cultura general","b) Marvel","c) Musica","d) Historia", "e) Ciencia","f) Dibujos Animados","g) Tecnologia""\n"]
 
 # ARREGLO DE CLAVES - CULTURA GENERAL:
@@ -72,10 +73,8 @@ opcionesDibujos = [["a. Es su hermano","b. Es su primo","c. Es un amigo"]
 ,["a. Neptunoman","b. Chico Perseve","c. Sirenoman"]
 ,["a. Tierra","b. Agua","c. Fuego"]]
 
-# ARREGLO PREGUNTA EXTRA
-opcionesPreguntaExtra = [["a. Masa","b. Dureza","c. Peso"]]
-
-Respuesta="Default"
+# ARREGLO DE CLAVES - PREGUNTA EXTRA:
+opcionesExtra = [["a. Masa","b. Dureza","c. Peso"]]
 
 # FUNCIONES
 
@@ -88,10 +87,10 @@ def inicio():
     # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
     print("\n""DIGITEN SUS RESPECTIVOS NICK NAMES: ")
-    nombreA=input("Nombre del Jugador1: ")
-    nombreB=input("Nombre del Jugador2: ")
+    nombreA=input("\n""Nombre del Jugador1: ")
+    nombreB=input("\n""Nombre del Jugador2: ")
     print("****************************************************************************************************************************************************")
-    print ("Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
+    print ("\n""Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
     
 # USUARIO SELECCIONA LA CATEGORIA DE PREGUNTAS
 
@@ -127,27 +126,9 @@ def elegir_categoria():
     
 
 # FUNCIONA PARA LLEVAR LA CUENTA DEL JUGADOR O JUGADORES, Y SABER QUIEN HA GANADO
+
 def contadores():
     
-    global preguntaExtra
-
-    print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
-    print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
-
-    if ContadorA > ContadorB:
-        print("El ganador es ",nombreA)
-    elif ContadorA < ContadorB:
-        print("EL ganador es ",nombreB)
-    else:
-        print("La victoria se decidira con una pregunta RANDOM!!")
-        preguntaExtra()
-
-'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
-
-# PREGUNTA EXTRA
-  
-def preguntaExtra():
-
     global ContadorA
     global ContadorB
     global RespuestaA
@@ -155,29 +136,79 @@ def preguntaExtra():
     global nombreA
     global nombreB
 
-    # PREGUNTA 
+    print ("El participante ",nombreA," obtubo ",ContadorA," puntos")
+    print ("El participante ",nombreB," obtubo ",ContadorB," puntos")
 
-    print("¿Cual de las siguientes opciones no es una propiedad general de la materia?")
+    if ContadorA == ContadorB:
+        print("\n""La victoria se decidira con una pregunta RANDOM!")
+        pedirRespuestaA()
+        pedirRespuestaB()
+        
+        if RespuestaA == "b" and RespuestaB != "b":
+            print ("Ha ganado ",nombreA)
+        elif RespuestaA != "b" and RespuestaB == "b":
+            print ("Ha ganado ", nombreB)
+        elif RespuestaA == "b" and RespuestaB == "b":
+            print("Han empatado")
+        else:
+            print("Han empatado")
+    elif ContadorA < ContadorB:
+        print("EL ganador es ",nombreB)
+    else:
+        print("El ganador es ",nombreA)
 
-    print ( opcionesPreguntaExtra[0] )
+'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
+
+# PREGUNTA EXTRA A 
+
+def pedirRespuestaA():
     
-    RespuestaA = input(nombreA, " ingrese la letra de su respuesta: ")
-    RespuestaB = input(nombreB, " ingrese la letra de su respuesta: ")
+    global ContadorA
+    global Respuesta
+    global RespuestaA
+    global nombreA
 
-    if RespuestaA.lower()=="b":
+    print("ES EL TURNO DE ",nombreA)
+    print("¿Cual de las siguientes opciones ,no es un extado general de la materia?")
+
+    for i in opcionesExtra[0]:
+        print (i)
+    RespuestaA=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
-        print("Respuesta correcta tienes ",ContadorA," puntos")
-        print("Usted ha ganado")
-    elif RespuestaB.lower()=="b":
-        ContadorB=ContadorB+1
-        print("Respuesta correcta tienes ",ContadorB," puntos")
-        print("Usted ha ganado")
-    elif RespuestaA.lower()=="b" and RespuestaB.lower()=="b":
-        ContadorA=ContadorA+1
-        ContadorB=ContadorB+1
-        print("La batalla finalizo como un empate")
+        Respuesta=RespuestaA
+        print("RESPUESTA GUARDADA")
     else:   
-        print("Ambos perdieron, intentelo en otra categoria")
+        print("RESPUESTA GUARDADA")
+    return Respuesta
+    print("\n")
+
+'''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
+
+# PREGUNTA EXTRA B
+
+def pedirRespuestaB():
+    
+    global ContadorB
+    global Respuesta
+    global RespuestaB
+    global nombreB
+
+    print("ES EL TURNO DE ",nombreB)
+    print("¿Cual de las siguientes opciones ,no es un extado general de la materia?")
+
+    for i in opcionesExtra[0]:
+        print (i)
+    RespuestaB=input("Ingrese la letra de su respuesta: ")
+    
+    if Respuesta.lower()=="b":
+        ContadorB=ContadorB+1
+        Respuesta=RespuestaB
+        print("RESPUESTA GUARDADA") 
+    else:   
+        print("RESPUESTA GUARDADA")
+    return Respuesta
     print("\n")
 
 '''//////////////////////////////////////////////////////////////////////////////////////////////////////////'''
