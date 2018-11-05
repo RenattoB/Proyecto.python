@@ -343,7 +343,7 @@ def preguntasMarvel():
         print (i)
     Respuesta=input("Ingrese la letra de su respuesta: ")
 
-    if Respuesta=="C" or Respuesta=="c":
+    if Respuesta.lower()=="c":
         ContadorA = ContadorA + 1
         print("Respuesta correcta tienes ",ContadorA," puntos") 
     else:   
@@ -900,3 +900,6 @@ def preguntasTecnologia():
     else:
         print("Repuesta incorrecta")
     print("\n") 
+
+
+
