@@ -79,6 +79,7 @@ opcionesExtra = [["a. Masa","b. Dureza","c. Peso"]]
 # FUNCIONES
 
 def inicio():
+    
     global ContadorErrores
     global nombreA
     global nombreB
@@ -87,8 +88,25 @@ def inicio():
     # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
     print("\n""DIGITEN SUS RESPECTIVOS NICK NAMES: ")
-    nombreA=input("\n""Nombre del Jugador1: ")
-    nombreB=input("\n""Nombre del Jugador2: ")
+    while True:
+        nombreA=input("\n""Nombre del Jugador1: ")
+        if len(nombreA) == 0:
+            mensaje=input("Error, porfavor digite un nickname -digite 'c' para continuar :")
+            if mensaje.lower() != "c":
+                break
+        else:
+            print("REGISTRADO")
+            break
+    while True:    
+        nombreB=input("\n""Nombre del Jugador2: ")
+        if len(nombreB)==0:
+            mensaje=input("Error, porfavor digite un nickname -digite 'c' para continuar :")
+            if mensaje.lower() != "c":
+                break
+        else:
+            print("REGISTRADO")
+            break
+    
     print("****************************************************************************************************************************************************")
     print ("\n""Hola  ",nombreA," y ",nombreB, " bienvenidos a la alpha del juego, ustedes se enfrentaran por la gloria. ¿Estais listo para jugar?")
     
