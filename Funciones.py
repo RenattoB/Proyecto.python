@@ -88,21 +88,17 @@ def inicio():
     # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
     print("\n""DIGITEN SUS RESPECTIVOS NICK NAMES: ")
-    while True:
-        nombreA=input("\n""Nombre del Jugador1: ")
+    nombreA=input("\n""Nombre del Jugador1: ")
+    while True:        
         if len(nombreA) == 0:
-            mensaje=input("Error, porfavor digite un nickname -digite 'c' para continuar :")
-            if mensaje.lower() != "c":
-                break
+            nombreA=input("Error, digite el nombre del jugador 1: ")            
         else:
             print("REGISTRADO")
             break
+    nombreB=input("\n""Nombre del Jugador2: ")
     while True:    
-        nombreB=input("\n""Nombre del Jugador2: ")
         if len(nombreB)==0:
-            mensaje=input("Error, porfavor digite un nickname -digite 'c' para continuar :")
-            if mensaje.lower() != "c":
-                break
+            nombreB=input("Error, digite el nombre del jugador 2: ")         
         else:
             print("REGISTRADO")
             break
