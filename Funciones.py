@@ -88,17 +88,17 @@ def inicio():
     # NOMBRE PLAYER1 Y PLAYER2 (O ENEMIGO)  
 
     print("\n""DIGITEN SUS RESPECTIVOS NICK NAMES: ")
-    nombreA=input("\n""Nombre del Jugador1: ")
+    nombreA=input("\n""Nombre del Jugador1: ").strip() 
     while True:        
         if len(nombreA) == 0:
-            nombreA=input("Error, digite el nombre del jugador 1: ")            
+            nombreA=input("Error, digite el nombre del jugador 1: ").strip()            
         else:
             print("REGISTRADO")
             break
-    nombreB=input("\n""Nombre del Jugador2: ")
+    nombreB=input("\n""Nombre del Jugador2: ").strip() 
     while True:    
         if len(nombreB)==0:
-            nombreB=input("Error, digite el nombre del jugador 2: ")         
+            nombreB=input("Error, digite el nombre del jugador 2: ").strip()          
         else:
             print("REGISTRADO")
             break
@@ -117,19 +117,19 @@ def elegir_categoria():
         print (" ",i," ")
 
     while True:
-        eleccion = input("Digite la letra correspondiente a la categoria:  ")
+        eleccion = input("Digite la letra correspondiente a la categoria:  ").strip() 
         if eleccion.lower()=="a" or eleccion.lower()=="b" or eleccion.lower()=="c" or eleccion.lower()=="d" or eleccion.lower()=="e" or eleccion.lower()=="f" or eleccion.lower()=="g":
-            if eleccion == "a" or eleccion == "A":
+            if eleccion.lower()== "a" :
                 categoria_elegida= "Cultura general"            
-            elif eleccion == "b" or eleccion == "B":
+            elif eleccion.lower() == "b" :
                 categoria_elegida= "Marvel"
-            elif eleccion == "c" or eleccion == "C":
+            elif eleccion.lower() == "c":
                 categoria_elegida= "Musica"
-            elif eleccion == "d" or eleccion == "D":
+            elif eleccion.lower() == "d" :
                 categoria_elegida= "Historia"
-            elif eleccion == "e" or eleccion == "E":
+            elif eleccion.lower() == "e" :
                 categoria_elegida= "Ciencia"
-            elif eleccion == "f" or eleccion == "F":
+            elif eleccion.lower() == "f" :
                 categoria_elegida= "Dibujos Animados"
             else:
                 categoria_elegida= "Tecnologia"
@@ -183,11 +183,11 @@ def pedirRespuestaA():
     global nombreA
 
     print("ES EL TURNO DE ",nombreA)
-    print("¿Cual de las siguientes opciones ,no es un extado general de la materia?")
+    print("¿Cual de las siguientes opciones ,no es un propiedad general de la materia?")
 
     for i in opcionesExtra[0]:
         print (i)
-    RespuestaA=input("Ingrese la letra de su respuesta: ")
+    RespuestaA=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -214,7 +214,7 @@ def pedirRespuestaB():
 
     for i in opcionesExtra[0]:
         print (i)
-    RespuestaB=input("Ingrese la letra de su respuesta: ")
+    RespuestaB=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -243,7 +243,7 @@ def preguntasCulturaGeneral():
 
     for i in opcionesCultura[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -258,7 +258,7 @@ def preguntasCulturaGeneral():
 
     for i in opcionesCultura[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -272,7 +272,7 @@ def preguntasCulturaGeneral():
     print("¿En que año inicio la segunda guerra mundial?")
     for i in opcionesCultura[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
@@ -286,7 +286,7 @@ def preguntasCulturaGeneral():
     print("¿Cual es el metal mas caro del mundo?")
     for i in opcionesCultura[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -300,7 +300,7 @@ def preguntasCulturaGeneral():
     print("¿En que pais se encuentra La Universidad de Cambridge?")
     for i in opcionesCultura[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -314,7 +314,7 @@ def preguntasCulturaGeneral():
     print("¿Cual es el libro sagrado del Islam?")
     for i in opcionesCultura[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1
@@ -341,7 +341,7 @@ def preguntasMarvel():
 
     for i in opcionesMarvel[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA = ContadorA + 1
@@ -356,7 +356,7 @@ def preguntasMarvel():
 
     for i in opcionesMarvel[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1
@@ -369,7 +369,7 @@ def preguntasMarvel():
     print("¿En que lugar fue guardado la gema del espacio , tras los sucesos en el film Captain America?")
     for i in opcionesMarvel[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -383,7 +383,7 @@ def preguntasMarvel():
     print("¿Dónde era guardada la gema del poder, en Guardians of the Galaxy?")
     for i in opcionesMarvel[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -397,7 +397,7 @@ def preguntasMarvel():
     print("¿Qué habilidades te otorga la gema de la realidad?")
     for i in opcionesMarvel[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
@@ -411,7 +411,7 @@ def preguntasMarvel():
     print("¿Quién le da la gema de la mente a visión (en los comics)?")
     for i in opcionesMarvel[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -438,7 +438,7 @@ def preguntasMusica():
 
     for i in opcionesMusica[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -453,7 +453,7 @@ def preguntasMusica():
 
     for i in opcionesMusica[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -466,7 +466,7 @@ def preguntasMusica():
     print("¿Que banda de rock fundó Jimmy Page en 1968?")
     for i in opcionesMusica[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -480,7 +480,7 @@ def preguntasMusica():
     print("¿En que año Culture Club obtuvo un numero 1 con Karma Chameleon?")
     for i in opcionesMusica[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1
@@ -494,7 +494,7 @@ def preguntasMusica():
     print("¿A cual de los siguientes grupos no pertenece Mike Shinoda?")
     for i in opcionesMusica[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -508,7 +508,7 @@ def preguntasMusica():
     print("¿Cual fue el nombre de la pelicula de Eminem?")
     for i in opcionesMusica[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -534,7 +534,7 @@ def preguntasHistoria():
 
     for i in opcionesHistoria[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -549,7 +549,7 @@ def preguntasHistoria():
 
     for i in opcionesHistoria[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1
@@ -562,7 +562,7 @@ def preguntasHistoria():
     print("Debido a los elevados gastos militares realizados por Inglaterra en la Guerra de los Siete Años contra Francia (1756-1763), el fisco quedó en ruina, motivo por el cual tuvo que adoptar medidas para generar ingresos. Una de estas fue...")
     for i in opcionesHistoria[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -576,7 +576,7 @@ def preguntasHistoria():
     print("Luego de canceladas la mayoría de las encomiendas por la aplicación de las denominadas Nuevas Leyes (1542), la economía colonial estuvo basada en las rentas que proporcionaban ...")
     for i in opcionesHistoria[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -590,7 +590,7 @@ def preguntasHistoria():
     print("La segunda Revolución Industrial, caracterizada por el uso de nuevas fuentes de energía y la especialización de los procesos de trabajo se desarrolló a finales del siglo XIX en países como...")
     for i in opcionesHistoria[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -604,7 +604,7 @@ def preguntasHistoria():
     print("La ruptura de Augusto B. Leguía con el Partido Civil, hacia 1919, significó la culminación de un proceso económico iniciado a comienzos del siglo XX en el Perú. ¿Cuál fue su característica central?")
     for i in opcionesHistoria[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1
@@ -630,7 +630,7 @@ def preguntasCiencia():
 
     for i in opcionesCiencia[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="b":
         ContadorA = ContadorA + 1
@@ -645,7 +645,7 @@ def preguntasCiencia():
 
     for i in opcionesCiencia[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -658,7 +658,7 @@ def preguntasCiencia():
     print("En un Proceso Isocóro se mantiene contante ........")
     for i in opcionesCiencia[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -672,7 +672,7 @@ def preguntasCiencia():
     print("¿Cual de los siguientes elementos no pertenece al grupo de los Gases Nobles?")
     for i in opcionesCiencia[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -686,7 +686,7 @@ def preguntasCiencia():
     print("¿Cuando se considera un evento de Conservacion de Energia?")
     for i in opcionesCiencia[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -700,7 +700,7 @@ def preguntasCiencia():
     print("¿Cual es la relacion incorrecta entre elemento - grupo en la tabla periodica ?")
     for i in opcionesCiencia[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -726,7 +726,7 @@ def preguntasDibujos():
 
     for i in opcionesDibujos[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="b":
         ContadorA = ContadorA + 1
@@ -741,7 +741,7 @@ def preguntasDibujos():
 
     for i in opcionesDibujos[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -754,7 +754,7 @@ def preguntasDibujos():
     print("¿Como se llamaban los mejores amigos de Jimmmy Neutron?")
     for i in opcionesDibujos[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
@@ -768,7 +768,7 @@ def preguntasDibujos():
     print("¿Como se llamaba la chica de la cual Timmy Turner estaba enamorado?")
     for i in opcionesDibujos[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -782,7 +782,7 @@ def preguntasDibujos():
     print("¿Cual era el nombre del heroe que admiraba Bob Esponja?")
     for i in opcionesDibujos[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorA=ContadorA+1
@@ -796,7 +796,7 @@ def preguntasDibujos():
     print("¿En la serie Avatar cual fue el ultimo elemento que aprendio Aang?")
     for i in opcionesDibujos[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -822,7 +822,7 @@ def preguntasTecnologia():
 
     for i in opcionesTecnologia[0]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorA = ContadorA + 1
@@ -837,7 +837,7 @@ def preguntasTecnologia():
 
     for i in opcionesTecnologia[1]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="c":
         ContadorB=ContadorB+1
@@ -850,7 +850,7 @@ def preguntasTecnologia():
     print("¿Qué es un 'malware'?")
     for i in opcionesTecnologia[2]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
 
     if Respuesta.lower()=="a":
         ContadorA=ContadorA+1
@@ -864,7 +864,7 @@ def preguntasTecnologia():
     print("El 'internet de las cosas es': ")
     for i in opcionesTecnologia[3]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorB=ContadorB+1
@@ -878,7 +878,7 @@ def preguntasTecnologia():
     print("La 'computación en la nube' se le dice a: ")
     for i in opcionesTecnologia[4]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="b":
         ContadorA=ContadorA+1
@@ -892,7 +892,7 @@ def preguntasTecnologia():
     print("'Big data' se conoce como: ")
     for i in opcionesTecnologia[5]:
         print (i)
-    Respuesta=input("Ingrese la letra de su respuesta: ")
+    Respuesta=input("Ingrese la letra de su respuesta: ").strip() 
     
     if Respuesta.lower()=="a":
         ContadorB=ContadorB+1

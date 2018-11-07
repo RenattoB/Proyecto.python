@@ -4,8 +4,8 @@ from Funciones import *
 while True:
     # ENTRADA 
     inicio()
-
-    # PROCESO
+ 
+    # PROCESO                   
     a = elegir_categoria()
 
     if a== "Historia" :
@@ -33,8 +33,8 @@ while True:
     # SALIDA   
     contadores()
 
-    continuar=input("¿Desea continuar: S/N")
-    if continuar.lower()=="n":
+    continuar=input("¿Desea continuar: S/N ").strip() 
+    if continuar.lower()=="n" or continuar.lower()=="no":
         print("Gracias por jugar!!")
         break
 
